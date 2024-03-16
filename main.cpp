@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 /*void bubbleSort(std::vector<int>& numbers) {
     int n = numbers.size();
     for (int i = 0; i < n - 1; i++) {
@@ -37,7 +37,7 @@ int main() {
 /* Ejercicio 2
   /* Hennrry Geovanny Canahui Gomez # 0909-23-258
   */
-int main() {
+/*int main() {
     int lista[5] = {1, 2, 3, 4, 5};
 
     int busqueda, resulado;
@@ -53,4 +53,27 @@ int main() {
             break;
         }
     }
+}*/
+int main() {
+    int n;
+    std::cout << "Ingrese el numero de elementos: ";
+    std::cin >> n;
+
+    std::vector<int> numeros(n);
+    std::cout << "Ingrese los numeros:\n";
+    for (int i = 0; i < n; ++i) {
+        std::cin >> numeros[i];
+    }
+
+    // Ordenamos el vector y eliminamos los elementos duplicados
+    std::sort(numeros.begin(), numeros.end());
+    numeros.erase(std::unique(numeros.begin(), numeros.end()), numeros.end());
+
+    std::cout << "Los numeros sin duplicados son:\n";
+    for (int num : numeros) {
+        std::cout << num << ' ';
+    }
+    std::cout << '\n';
+
+    return 0;
 }
