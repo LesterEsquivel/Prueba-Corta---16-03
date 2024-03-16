@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void bubbleSort(std::vector<int>& numbers) {
+/*void bubbleSort(std::vector<int>& numbers) {
     int n = numbers.size();
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -33,4 +33,24 @@ int main() {
     }
     std::cout << std::endl;
     return 0;
+}*/
+/* Ejercicio 2
+  /* Hennrry Geovanny Canahui Gomez # 0909-23-258
+  */
+int main() {
+    int lista[5] = {1, 2, 3, 4, 5};
+
+    int busqueda, resulado;
+    std::cout << "Digite un numero para buscarlo: ";
+    std::cin >> busqueda;
+    for (int i = 1; i <= busqueda; i++) {
+        resulado = lista[i];
+        if (busqueda == resulado) {
+            std::cout << "El numero ingresado si esta en la lista!" << std::endl;
+            break;
+        } else if ((sizeof(lista) / sizeof(int)) == resulado) {
+            std::cout << "El numero ingresado no esta resgistrado" << std::endl;
+            break;
+        }
+    }
 }
